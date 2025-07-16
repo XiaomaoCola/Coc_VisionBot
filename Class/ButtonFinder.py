@@ -3,6 +3,7 @@ import pyautogui
 from PIL import Image
 import cv2
 import numpy as np
+import random
 
 class ButtonFinder:
     def __init__(self, template_path, threshold=0.8):
@@ -13,7 +14,7 @@ class ButtonFinder:
     def find_button(self, screenshot=None):
         if screenshot is None:
             # 查找标题包含 'BlueStacks' 的窗口
-            windows = [w for w in gw.getWindowsWithTitle('BlueStacks') if w.isVisible]
+            windows = [w for w in gw.getWindowsWithTitle('BlueStacks') if w.visible]
             if not windows:
                 raise Exception("No BlueStacks window found.")
             window = windows[0]
@@ -39,5 +40,19 @@ class ButtonFinder:
             pyautogui.moveTo(pos[0], pos[1], duration=0.2)
             pyautogui.click()
             print(f"Clicked at {pos}")
+        else:
+            print("Button not found.")
+
+
+    def click_button_random(self, pos):
+        if pos is not None:
+            # 在按钮中心附近随机±5像素
+            offset_x = random.randint(-5, 5)
+            offset_y = random.randint(-5, 5)
+            x = pos[0] + offset_x
+            y = pos[1] + offset_y
+            pyautogui.moveTo(x, y, duration=0.2)
+            pyautogui.click()
+            print(f"Clicked at ({x}, {y})")
         else:
             print("Button not found.")

@@ -1,4 +1,4 @@
-from Class.ButtonFinder import ButtonFinder
+from Class.Button import ButtonFinder
 from PIL import Image
 
 if __name__ == '__main__':

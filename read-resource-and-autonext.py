@@ -1,5 +1,5 @@
 import time
-from Class.ButtonFinder import ButtonFinder
+from Class.Button import ButtonFinder
 from Class.ResourceReader import ResourceReader
 from Class.TargetFinder import TargetFinder
 

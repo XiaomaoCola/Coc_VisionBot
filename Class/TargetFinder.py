@@ -1,6 +1,6 @@
 import time
 from Class.ResourceReader import ResourceReader
-from Class.ButtonFinder import ButtonFinder
+from Class.Button import ButtonFinder
 
 class TargetFinder:
     def __init__(self, target_judge_func, next_btn_img_path):

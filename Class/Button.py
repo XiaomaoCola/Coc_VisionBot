@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import random
 
-class ButtonFinder:
+class Button:
     def __init__(self, template_path, threshold=0.8):
         self.template = cv2.imread(template_path, 0)
         self.w, self.h = self.template.shape[::-1]

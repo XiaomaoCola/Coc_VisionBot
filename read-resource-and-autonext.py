@@ -1,12 +1,12 @@
 import time
-from Class.Button import ButtonFinder
+from Class.Button import Button
 from Class.ResourceReader import ResourceReader
 from Class.TargetFinder import TargetFinder
 
 if __name__ == "__main__":
     # 1. 点击 attack 按钮
     attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack_1.png"
-    attack_finder = ButtonFinder(attack_btn_path)
+    attack_finder = Button(attack_btn_path)
     attack_pos = attack_finder.find_button()
     if attack_pos:
         adjusted_attack_pos = (attack_pos[0], attack_pos[1] + 100)
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # 3. 查找并点击 Find a Match 按钮
     find_match_btn_path = r"D:\python-project\Coc_VisionBot\templates\Find_a_Match.png"
-    match_finder = ButtonFinder(find_match_btn_path)
+    match_finder = Button(find_match_btn_path)
     match_pos = match_finder.find_button()
     if match_pos:
         # pos[0] 是x坐标，pos[1]是y坐标

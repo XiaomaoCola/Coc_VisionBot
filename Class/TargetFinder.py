@@ -1,6 +1,6 @@
 import time
 from Class.ResourceReader import ResourceReader
-from Class.Button import ButtonFinder
+from Class.Button import Button
 
 class TargetFinder:
     def __init__(self, target_judge_func, next_btn_img_path):
@@ -11,7 +11,7 @@ class TargetFinder:
         self.target_judge_func = target_judge_func
         self.next_btn_img_path = next_btn_img_path
         self.reader = ResourceReader()
-        self.next_finder = ButtonFinder(self.next_btn_img_path)
+        self.next_finder = Button(self.next_btn_img_path)
 
     def find_target(self):
         while True:

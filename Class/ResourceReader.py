@@ -61,12 +61,12 @@ class ResourceReader:
         gold_pos = self.match_icon(window_img, self.gold_template)  # (x, y)
         elixir_pos = self.match_icon(window_img, self.elixir_template)
 
-        # 假设数字区在图标右侧10像素，宽100，高与图标高度一致
+        # 假设数字区在图标右侧40像素，宽200，高与图标高度一致
         w_gold, h_gold = self.gold_template.shape[::-1]
         w_elixir, h_elixir = self.elixir_template.shape[::-1]
 
-        gold_num_area = (gold_pos[0] + w_gold + 10, gold_pos[1], 100, h_gold)
-        elixir_num_area = (elixir_pos[0] + w_elixir + 10, elixir_pos[1], 100, h_elixir)
+        gold_num_area = (gold_pos[0] + w_gold + 40, gold_pos[1], 200, h_gold)
+        elixir_num_area = (elixir_pos[0] + w_elixir + 40, elixir_pos[1], 200, h_elixir)
 
         gold_img = window_img.crop((gold_num_area[0], gold_num_area[1],
                                     gold_num_area[0] + gold_num_area[2],

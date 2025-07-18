@@ -22,8 +22,10 @@ if __name__ == "__main__":
     match_finder = ButtonFinder(find_match_btn_path)
     match_pos = match_finder.find_button()
     if match_pos:
-        match_finder.click_button(match_pos)
-        print("已点击Find a Match按钮")
+        # pos[0] 是x坐标，pos[1]是y坐标
+        adjusted_pos = (match_pos[0], match_pos[1] + 100)
+        match_finder.click_button(adjusted_pos)
+        print("已点击Find a Match按钮（向下偏移100像素）")
     else:
         print("没有找到Find a Match按钮，脚本退出")
         exit(1)

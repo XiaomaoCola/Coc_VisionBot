@@ -1,6 +1,7 @@
 import time
 from Class.ResourceReader import ResourceReader
 from Class.Button import Button
+import random
 
 class TargetFinder:
     def __init__(self, target_judge_func, next_btn_img_path):
@@ -31,7 +32,7 @@ class TargetFinder:
                 print("找不到 next 按钮，脚本退出")
                 return gold, elixir
 
-            time.sleep(10)
+            time.sleep(random.uniform(6, 8))
 
 
 # def my_target_judge(gold, elixir):

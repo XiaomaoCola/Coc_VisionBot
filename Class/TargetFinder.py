@@ -23,14 +23,21 @@ class TargetFinder:
                 print("目标已满足，脚本结束！")
                 return gold, elixir
 
-            print("目标未满足，点击 next...")
-            next_pos = self.next_finder.find_button()
-            adjusted_next_pos =  (next_pos[0], next_pos[1] + 100)
-            if next_pos:
-                self.next_finder.click_button(adjusted_next_pos)
-            else:
+            # print("目标未满足，点击 next...")
+            # next_pos = self.next_finder.find_button()
+            # adjusted_next_pos =  (next_pos[0], next_pos[1] + 100)
+            # if next_pos:
+            #     self.next_finder.click_button(adjusted_next_pos)
+            # else:
+            #     print("找不到 next 按钮，脚本退出")
+            #     return gold, elixir
+
+            clicked_pos = self.next_finder.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=100)
+            if clicked_pos is None:
                 print("找不到 next 按钮，脚本退出")
                 return gold, elixir
+
+
 
             time.sleep(random.uniform(6, 8))
 

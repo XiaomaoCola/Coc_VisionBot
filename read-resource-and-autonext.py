@@ -28,7 +28,12 @@ if __name__ == "__main__":
     print(f"等待了 {sleep_time_after_Find_a_Match:.2f} 秒等待对战页面加载")
 
     # 5. 自动查找满足条件的目标
-    target_judge_func = lambda gold, elixir: gold + elixir >= 2_000_000
+    target_judge_func = lambda gold, elixir: (
+            gold + elixir >= 2_000_000 and gold < 2_500_000 and elixir < 2_500_000
+    )
+    # 这个函数的意思是，不但黄金和圣水要加起来要大于等于200万，而且必须两方数值都必须小于250万。
+    # 就是识别可能会识别错，黄金或者圣水，只要一个超过250万的，那就是是被错误。
+
     next_btn_img_path = r"D:\python-project\Coc_VisionBot\templates\next.png"
     finder = TargetFinder(target_judge_func, next_btn_img_path)
     gold, elixir = finder.find_target()

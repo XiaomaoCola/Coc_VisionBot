@@ -84,3 +84,4 @@ class Button:
         """
         pos = self.find_button(screenshot)
         self.click_button_random(pos, offset_range_x, offset_range_y, y_offset)
+        return pos # 这边返回的是偏离之前的坐标。

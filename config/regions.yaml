@@ -1,0 +1,11 @@
+rectangle_region:
+  type: rectangle
+  x1: 0
+  y1: 400
+  x2: 150
+  y2: 750
+  # 这边的(x1,y1),(x2,y2)可以理解为相对bluestack左上角坐标的坐标。
+  # 也就是bluestack左上角的顶点是原点时候的相对坐标。
+
+
+# 可以加更多区域...

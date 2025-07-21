@@ -6,7 +6,7 @@ import random
 
 if __name__ == "__main__":
     # 1. 随机点击 attack 按钮
-    attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack_3.png"
+    attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack_1.png"
     attack_btn = Button(attack_btn_path)
     attack_btn.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=100)
     print("已点击 attack 按钮")

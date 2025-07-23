@@ -32,7 +32,7 @@ class AutoFarmLoop:
             # 4. 自动点击Return Home按钮
             print("准备返回主页面...")
             return_btn = Button(self.return_home_btn_path)
-            return_btn.find_and_click_button_random(y_offset=0)
+            return_btn.find_and_click_button_random(y_offset=150)
             print("已点击 Return Home 按钮")
 
             # 5. 额外短暂等待，防止太快
@@ -42,7 +42,7 @@ class AutoFarmLoop:
 if __name__ == "__main__":
     # 1. 配置目标查找类
     target_judge_func = lambda gold, elixir: (
-        gold + elixir >= 1_000_000 and gold < 2_500_000 and elixir < 2_500_000
+        gold + elixir >= 500_000 and gold < 2_500_000 and elixir < 2_500_000
     )
     auto_match_finder = AutoMatchFinder(
         attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack.png",

@@ -2,6 +2,10 @@ import yaml
 import pygetwindow as gw
 
 class BattleArea:
+    """
+    从config/regions.yaml 中拿到设置，
+    """
+
     def __init__(self, yaml_path):
         with open(yaml_path, 'r', encoding='utf-8') as f:
             self.areas_yaml = yaml.safe_load(f)
@@ -10,7 +14,7 @@ class BattleArea:
         window = [w for w in gw.getWindowsWithTitle('BlueStacks') if w.visible][0]
         return window.left, window.top
 
-    def get_absolute_coords(self, area_name):
+    def get_coords(self, area_name):
         """返回指定区域的实际像素坐标(tuple: 左上x, 左上y, 右下x, 右下y)"""
         if area_name not in self.areas_yaml:
             raise ValueError(f"区域名 {area_name} 不存在！")

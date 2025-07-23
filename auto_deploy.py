@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     # 2. 计算下兵区域的屏幕坐标
     ba = BattleArea('config/regions.yaml')
-    region_tuple = ba.get_absolute_coords('rectangle_region')  # 区域名和yaml里保持一致
+    region_tuple = ba.get_coords('rectangle_region')  # 区域名和yaml里保持一致
 
     # 3. 区域内撒兵
     click_and_drag_region = ClickAndDragInRegion(region_tuple)

@@ -32,7 +32,7 @@ class TargetFinder:
             #     print("找不到 next 按钮，脚本退出")
             #     return gold, elixir
 
-            clicked_pos = self.next_finder.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=100)
+            clicked_pos = self.next_finder.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=150)
             if clicked_pos is None:
                 print("找不到 next 按钮，脚本退出")
                 return gold, elixir

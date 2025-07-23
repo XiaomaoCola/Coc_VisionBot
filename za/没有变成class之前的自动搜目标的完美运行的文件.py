@@ -6,7 +6,7 @@ import random
 
 if __name__ == "__main__":
     # 1. 随机点击 attack 按钮
-    attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack_1.png"
+    attack_btn_path = r"/templates/attack_1.png"
     attack_btn = Button(attack_btn_path)
     attack_btn.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=100)
     print("已点击 attack 按钮")
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print(f"等待了 {sleep_time_wait_Find_a_Match:.2f} 秒等待‘Find a Match’按钮出现")
 
     # 3. 随机点击 Find a Match 按钮
-    find_match_btn_path = r"D:\python-project\Coc_VisionBot\templates\Find_a_Match.png"
+    find_match_btn_path = r"/templates/Find_a_Match.png"
     match_finder = Button(find_match_btn_path)
     match_finder.find_and_click_button_random(offset_range_x=8, offset_range_y=8, y_offset=100)
     print("已点击 Find a Match 按钮")
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # 这个函数的意思是，不但黄金和圣水要加起来要大于等于200万，而且必须两方数值都必须小于250万。
     # 就是识别可能会识别错，黄金或者圣水，只要一个超过250万的，那就是是被错误。
 
-    next_btn_img_path = r"D:\python-project\Coc_VisionBot\templates\next.png"
+    next_btn_img_path = r"/templates/next.png"
     finder = TargetFinder(target_judge_func, next_btn_img_path)
     gold, elixir = finder.find_target()
     print(f"最终金币: {gold}, 圣水: {elixir}")

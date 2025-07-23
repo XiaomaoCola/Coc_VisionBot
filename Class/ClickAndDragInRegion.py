@@ -22,7 +22,7 @@ class ClickAndDragInRegion:
         # 可以写成for i in range(5):，但是i在这边是用不到的。
         # 所以换成下划线的这行代码的意思是：循环 n 次，但每次循环都不需要用到循环变量。
             x, y = self._random_point()
-            move_time = random.uniform(0.1, 0.3)
+            move_time = random.uniform(0.05, 0.1)
             pyautogui.moveTo(x, y, duration=move_time)
             pyautogui.click()
             print(f"Click at ({x},{y})  用时 {move_time:.2f}s")

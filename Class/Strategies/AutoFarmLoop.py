@@ -45,7 +45,7 @@ if __name__ == "__main__":
         gold + elixir >= 500_000 and gold < 2_500_000 and elixir < 2_500_000
     )
     auto_match_finder = AutoMatchFinder(
-        attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\attack_4.png",
+        attack_btn_path = r"D:\python-project\Coc_VisionBot\templates\Home_Village\Attack_Icon\attack_1.png",
         find_match_btn_path = r"D:\python-project\Coc_VisionBot\templates\Find_a_Match.png",
         next_btn_img_path = r"D:\python-project\Coc_VisionBot\templates\next.png",
         target_judge_func = target_judge_func

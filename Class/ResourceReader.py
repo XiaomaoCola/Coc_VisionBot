@@ -8,7 +8,7 @@ import os
 from paddleocr import PaddleOCR
 
 class ResourceReader:
-    def __init__(self, window_title="BlueStacks", template_dir="D:\\python-project\\Coc_VisionBot\\templates"):
+    def __init__(self, window_title="BlueStacks", template_dir="A:\\Projects\\Coc_VisionBot\\templates"):
         # 查找窗口
         windows = [w for w in gw.getWindowsWithTitle(window_title) if w.visible]
         if not windows:
@@ -91,7 +91,7 @@ class ResourceReader:
         # 这个就是要把刚刚写的区域给截图截下来。
 
         # ====== 保存刚刚的图，这边是用来调试用的！！回头要删掉或者注释掉 ======
-        debug_dir = r"D:\python-project\Coc_VisionBot\debug"
+        debug_dir = r"A:\Projects\Coc_VisionBot\debug"
         os.makedirs(debug_dir, exist_ok=True)
         gold_img_path = os.path.join(debug_dir, "debug_gold.png")
         elixir_img_path = os.path.join(debug_dir, "debug_elixir.png")

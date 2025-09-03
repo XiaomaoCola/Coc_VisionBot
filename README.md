@@ -1,3 +1,7 @@
+<p align="center">
+  🌐 <strong>Language</strong> | 🇯🇵 <a href="./README.md"><strong>日本語</strong></a> | 🇺🇸 <a href="./README_en.md"><strong>English</strong></a> | 🇨🇳 <a href="./README_ch.md"><strong>中文</strong></a>
+</p>
+
 ## 実機デモ動画
 
 🎥 [実機デモを視聴する](https://youtu.be/HaeDby77l3Y?si=1QVfL6IrvO1UjBFP)

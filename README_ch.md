@@ -4,7 +4,7 @@
 
 ## 实机演示视频
 
-🎥 [点击观看实机演示](https://youtu.be/HaeDby77l3Y?si=1QVfL6IrvO1UjBFP)
+🎥 [点击观看实机演示](https://youtu.be/HaeDby77l3Y?si=QiLViY-oqofK0pSc)
 
 ---
 

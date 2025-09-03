@@ -4,7 +4,7 @@
 
 ## Live Demo Video
 
-🎥 [Watch Live Demo](https://youtu.be/HaeDby77l3Y?si=QiLViY-oqofK0pSc)
+🎥 [Watch Live Demo](https://youtu.be/HaeDby77l3Y)
 
 ---
 

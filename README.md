@@ -4,7 +4,7 @@
 
 ## 実機デモ動画
 
-🎥 [実機デモを視聴する](https://youtu.be/HaeDby77l3Y?si=QiLViY-oqofK0pSc)
+🎥 [実機デモを視聴する](https://youtu.be/HaeDby77l3Y)
 
 ---
 
